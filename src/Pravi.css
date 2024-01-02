@@ -1,0 +1,264 @@
+/* Styles.css */
+
+/* Globalni stili */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+  }
+  
+  /* Navigacijska vrstica */
+  nav {
+    background: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  nav ul li a:hover {
+    color: #ddd;
+  }
+  
+  /* Glavni naslov in podnaslovi */
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Glavna vsebina */
+  main {
+    padding: 2rem;
+  }
+  
+  /* Slike in GIF-i */
+  img, .home-gif img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Noga (footer) */
+  footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+  
+  /* Posebni stili za domačo stran */
+  .home-container {
+    text-align: center;
+    padding: 0rem;
+    margin: 0px;
+    color: #333;
+  }
+  
+  .home-image img, .home-gif img {
+    max-width: 1000%;
+    margin: 0rem auto;
+    display: block;
+  }
+  
+  /* Stili za stran storitev */
+  .services-container {
+    padding: 0rem;
+  }
+  
+  .service-item {
+    margin-bottom: 0rem;
+  }
+  
+  .service-item img {
+    width: 100px; /* Ali kakšna druga primerna velikost */
+    margin-bottom: 0rem;
+  }
+  
+  /* Stili za galerijo */
+  .gallery-container {
+    padding: 2rem;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Stili za kontakt */
+  .contact-container {
+    padding: 2rem;
+    text-align: center;
+    height: auto;
+  }
+  
+  .contact-form {
+    margin: 2rem auto;
+    max-width: 600px;
+  }
+  
+  .contact-form input, .contact-form textarea, .contact-form button {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .contact-info {
+    font-size: 1rem;
+  }
+  
+  /* Media queries za odzivni dizajn */
+  @media (max-width: 700px) {
+    nav ul {
+      flex-direction: column;
+      margin: 0;
+    }
+  
+    nav ul li {
+      margin-bottom: 0rem;
+    }
+  }
+  .home-video video {
+    width: 100%; /* Ali določena širina, odvisno od vašega dizajna */
+    height: 90%; /* Ohrani razmerje stranic */
+    /*max-height: 500px;  Opcija, če želite omejiti višino */
+    border: none; /* Odstrani morebiten okvir */
+  }
+  
+  .video-container {
+    position: relative;
+    overflow: hidden; /* Da video ne presega meja svojega nadrejenega elementa */
+    /* Dodajte minimalno višino ali višino glede na vidno polje, da zagotovite, da bo kontejner zavzel prostor */
+    min-height: 85vh; /* Minimalna višina je 50% višine vidnega polja */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .background-video {
+    width: 100%;
+    /* Višina ni potrebna, ker bo višina določena glede na razmerje stranic videa */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centriranje videa */
+    z-index: -1; /* Video potisne v ozadje */
+  }
+  
+  .video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; /* Bela barva teksta za kontrast */
+    z-index: 1; /* Tekst potisne v ospredje */
+    /* Dodajte širino in druge stile, če je potrebno */
+    width: 100%; /* To bo omogočilo, da se širina prilagaja širini kontejnerja */
+  }
+  
+  /* Dodajte več stilov za naslov in paragraf, če je potrebno */
+  .video-overlay h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .video-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .service-item {
+    /* obstoječi stili... */
+    margin: 0rem;
+    padding: 0rem;
+    position: relative; /* Za pozicioniranje napisa */
+  }
+  
+  .service-item img {
+    width: 100%; /* Polna širina za slike */
+    height: auto; /* Ohranjanje razmerij slike */
+    border-radius: 8px; /* Nežno zaobljeni robovi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Rahla senca za globino */
+  }
+  
+  .service-item p {
+    position: absolute; /* Absolutno pozicioniranje znotraj itema */
+    bottom: 0; /* Postavitev na dno slike */
+    left: 0; /* Poravnava na levi strani */
+    width: 100%; /* Širina enaka širini slike */
+    background-color: rgba(0, 0, 0, 0.7); /* Polprosojna črna za berljivost */
+    color: #fff; /* Bela barva teksta */
+    padding: 0.5rem; /* Rahlo oblazinjenje okoli teksta */
+    box-sizing: border-box; /* Da padding ne spremeni širine */
+    font-size: 1.2rem; /* Velikost teksta */
+    text-align: center; /* Centriranje teksta */
+    border-radius: 0 0 8px 8px; /* Zaobljeni spodnji robovi */
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease-in-out; /* Animacija za "fade-in" efekt */
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 3fr)); /* Prilagodljive širine stolpcev */
+    grid-gap: 0px; /* Razmik med slikami */
+    padding: 0px;
+  }
+  
+  .gallery-item {
+    overflow: hidden; /* Preprečuje preseganje slike izven njenega kontejnerja */
+    position: relative;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Slika bo pokrivala celotno površino, a ohranjala razmerja */
+    transition: transform 0.3s ease-in-out; /* Gladka tranzicija za učinek povečave */
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.3); /* Učinek povečave pri premiku miške čez sliko */
+  }
