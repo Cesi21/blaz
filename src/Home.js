@@ -12,7 +12,7 @@ function Home() {
           </video>
           <div className="video-overlay">
             <h1>Dobrodošli pri Blaž Cesar s.p.</h1>
-            <h2>Ponosni na naše delo, zagotavljamo najboljše storitve polaganja tal in sten že več kot desetletje.</h2>
+            <h2>Ponosni na naše delo, zagotavljamo najboljše storitve polaganja tal in sten z visokim zadovoljstvom.</h2>
           </div>
         </div>
         
